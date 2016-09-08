@@ -107,6 +107,7 @@ app.controller('headerCtrl', function ($scope, $rootScope, ModalService, ExportS
 app.controller('AddNewContactModalController', function ($scope, close, AddressBookUpdater) {
 
     var refresh = true;
+    var submitClicked = false;
 
     $scope.reset = function () {
         $scope.entry = {};
@@ -115,11 +116,16 @@ app.controller('AddNewContactModalController', function ($scope, close, AddressB
     $scope.entry = {};
 
     $scope.submitNewEntry = function () {
+        //ToDo: AddressBook gets updated and then duplicateFound returns true... fix this
+        submitClicked = true;
         AddressBookUpdater.addNewEntry($scope.entry);
         close(refresh, 500);
     };
 
     $scope.duplicateFound = function () {
+        if(submitClicked){
+            return false;
+        }
         var addressBook = AddressBookUpdater.getEntries();
         var duplicateFound = false;
         for (var i = 0; i < addressBook.length; i++) {
