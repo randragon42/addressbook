@@ -1,16 +1,16 @@
 //Angular app declaration
-var app = angular.module('app', ['ngRoute', 'angularModalService']);
+var app = angular.module('app', ['ngRoute', 'angularModalService', 'ngStorage']);
 
-app.config(['$routeProvider', function($routeProvider){
+app.config(['$routeProvider', function ($routeProvider) {
 
     $routeProvider
         .when('/', {
             controller: 'addressBookCtrl',
             templateUrl: 'templates/address_book.html'
         })
-        .when('/edit_contacts', {
-            controller: 'editContactsCtrl',
-            templateUrl: 'templates/editContacts.html'
+        .when('/about', {
+            controller: '',
+            templateUrl: 'templates/about.html'
         })
         .otherwise('/');
 }]);

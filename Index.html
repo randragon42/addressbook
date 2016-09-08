@@ -13,6 +13,7 @@
       <div class="container">
         <div class="navbar-header">
           <a class="navbar-brand" href="#/">Address Book</a>
+          <a class="navbar-brand" href="#/about">About</a>
         </div>
 
         <ul class="nav navbar-nav navbar-right">
@@ -22,6 +23,8 @@
       </div>
       </nav>
     </header>
+
+
 
     <!-- Main Content and injected views -->
     <div ng-view>
@@ -37,12 +40,17 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="bower_components/alasql/dist/alasql.min.js"></script>
     <script src="bower_components/js-xlsx/dist/xlsx.core.min.js"></script>
+    <script src="bower_components/ngstorage/ngStorage.min.js"></script>
 
 
     <script type="text/javascript" src="js/app.js"></script>
     <script type="text/javascript" src="js/data.js"></script>
     <script type="text/javascript" src="js/controllers.js"></script>
     <script type="text/javascript" src="js/services.js"></script>
+
+    <script type="text/javascript"
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCvcfLF-qWGPrh6HBNh1FJSIaSNR0nGksg&libraries=places"
+            async defer></script>
 
 
 

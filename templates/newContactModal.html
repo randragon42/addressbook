@@ -8,7 +8,11 @@
             <div class="modal-body">
                 <form novalidate name="NewEntryForm" class="">
                     <label for="name" class="input left">Full Name</label>
-                    <input class="left" type="text" ng-model="entry.name" placeholder="First Last" required id="name"><br>
+                    <input class="left" type="text" ng-model="entry.name" placeholder="First Last" required id="name">
+                    <span style="color:red">
+                        <span ng-show="duplicateFound()">Duplicate Name</span>
+                    </span>
+                    <br>
                     <label for="address" class="input left">Address</label>
                     <input class="left" type="text" ng-model="entry.address" placeholder="123 Main Street" required id="address"><br>
                     <label for="city" class="input left">City</label>
@@ -19,10 +23,11 @@
                     <input class="left" type="text" ng-model="entry.phone" placeholder="651-555-5555" required id="phone"><br>
                 </form>
             </div>
+
             <div class="modal-footer">
                 <button type="button" ng-click="reset()" class="btn btn-default">Reset</button>
                 <button type="button" ng-click="close()" class="btn btn-default" data-dismiss="modal">Cancel</button>
-                <button type="button" ng-click="submitNewEntry()" class="btn btn-primary" data-dismiss="modal" ng-disabled="NewEntryForm.$invalid">Submit</button>
+                <button type="button" ng-click="submitNewEntry()" class="btn btn-primary" data-dismiss="modal" ng-disabled="NewEntryForm.$invalid || duplicateFound()">Submit</button>
             </div>
         </div>
     </div>
