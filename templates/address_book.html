@@ -1,0 +1,67 @@
+<!--
+    -Search Function
+        - Edit Distance of 1 (custom filter?)
+    - Export to spreadsheet
+-->
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCvcfLF-qWGPrh6HBNh1FJSIaSNR0nGksg&callback=initMap&libraries=places" async defer></script>
+
+<div style="width: 100%; display: table;">
+<div style="display: table-row">
+<div style="display: table-cell;">
+    <form name="searchAddressBook">
+        <input type="search" ng-model="searchString" placeholder="Search Address Book">
+    </form>
+
+    Order By:
+    <select ng-model="addressSortOrder">
+        <option value="+name">Name A-Z</option>
+        <option value="-name">Name Z-A</option>
+        <option value="address">Address</option>
+        <option value="city">City</option>
+        <option value="phone">Phone Number</option>
+    </select>
+
+
+<div>
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Address</th>
+            <th>City</th>
+            <th>State</th>
+            <th>Phone</th>
+            <th>Map</th>
+        </tr>
+        <tr ng-repeat="entry in addressBook | orderBy:addressSortOrder | filter:searchString">
+            <td><a ng-click="showEditContactModal(entry)">{{entry.name}}</a></td>
+            <td>{{entry.address}}</td>
+            <td>{{entry.city}}</td>
+            <td>{{entry.state}}</td>
+            <td>{{entry.phone}}</td>
+            <td><button ng-click="updateMap(entry)"><i class="material-icons">place</i></button></td>
+        </tr>
+    </table>
+</div>
+</div>
+
+
+<div style="display: table-cell;">
+
+    <h3>Map View</h3>
+    <div id="map"></div>
+
+
+
+</div>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+</div>

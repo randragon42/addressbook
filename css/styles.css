@@ -1,0 +1,50 @@
+body {
+  padding-top: 50px;
+  padding-bottom: 20px;
+  padding-left: 35px;
+  padding-right: 35px;
+}
+
+.instructor-follow-button {
+  margin-bottom: 3px;
+}
+.row {
+  margin-bottom: 3px;
+}
+
+.toast-top-right {
+  top: 50px;
+}
+
+th, td {
+  padding: 8px;
+  border: 1px solid black;
+}
+
+#map {
+  width: 500px;
+  height: 600px;
+  background-color: grey;
+}
+
+.center-modal {
+  position: fixed;
+  top: 10%;
+  left: 18.5%;
+  z-index: 1050;
+  width: 80%;
+  height: 80%;
+  margin-left: -10%;
+}
+
+
+.input {
+  width: 180px;
+  clear: left;
+  text-align: right;
+  padding-right: 10px;
+}
+
+.left {
+  float: left;
+}

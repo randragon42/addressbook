@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html ng-app="app">
+  <head>
+    <meta charset="utf-8"/>
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/toastr.min.css"/>
+    <link rel="stylesheet" href="css/styles.css"/>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  </head>
+  <body ng-controller="headerCtrl">
+    <header>
+      <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#/">Address Book</a>
+        </div>
+
+        <ul class="nav navbar-nav navbar-right">
+          <li><a class="btn btn-default" href ng-click="showAddNewContact()">Add New Contact</a></li>
+          <li><a class="btn btn-default" ng-click="exportToFile()">Export</a></li>
+        </ul>
+      </div>
+      </nav>
+    </header>
+
+    <!-- Main Content and injected views -->
+    <div ng-view>
+
+
+
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="bower_components/angular-modal-service/dst/angular-modal-service.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="bower_components/alasql/dist/alasql.min.js"></script>
+    <script src="bower_components/js-xlsx/dist/xlsx.core.min.js"></script>
+
+
+    <script type="text/javascript" src="js/app.js"></script>
+    <script type="text/javascript" src="js/data.js"></script>
+    <script type="text/javascript" src="js/controllers.js"></script>
+    <script type="text/javascript" src="js/services.js"></script>
+
+
+
+  </body>
+</html>

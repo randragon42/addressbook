@@ -1,0 +1,323 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for js\services.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../prettify.css" />
+    <link rel="stylesheet" href="../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../index.html">all files</a> / <a href="index.html">js/</a> services.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">31.43% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>11/35</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/4</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">15.38% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>2/13</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">32.35% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>11/34</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">//Services
+&nbsp;
+app.factory('AddressBookUpdater', function($http){
+&nbsp;
+    var localAddressBook = {};
+&nbsp;
+    var getEntries = function(){
+        return $http.get('/data.json').then(<span class="fstat-no" title="function not covered" >function(response){</span>
+<span class="cstat-no" title="statement not covered" >            return localAddressBook = response.data;</span>
+        });
+    };
+&nbsp;
+    var addNewEntry = <span class="fstat-no" title="function not covered" >function(entry){</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        localAddressBook = localAddressBook.concat(entry);</span>
+<span class="cstat-no" title="statement not covered" >        $http.post('/data', localAddressBook);</span>
+&nbsp;
+        //ToDo: Check for duplicates
+    };
+&nbsp;
+    var deleteEntry = <span class="fstat-no" title="function not covered" >function(entryToDelete){</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        for(var i = 0; i &lt; localAddressBook.length; i++){</span>
+<span class="cstat-no" title="statement not covered" >            if(localAddressBook[i].name == entryToDelete.name){</span>
+<span class="cstat-no" title="statement not covered" >                localAddressBook.splice(i, 1);</span>
+            }
+        }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        $http.post('/data', localAddressBook);</span>
+    };
+&nbsp;
+    var updateEntry = <span class="fstat-no" title="function not covered" >function(entryToUpdate){</span>
+<span class="cstat-no" title="statement not covered" >        console.log("Update " + entryToUpdate.name);</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        for(var i = 0; i &lt; localAddressBook.length; i++){</span>
+<span class="cstat-no" title="statement not covered" >            if(localAddressBook[i].name == entryToUpdate.name){</span>
+<span class="cstat-no" title="statement not covered" >                localAddressBook[i] = entryToUpdate;</span>
+            }
+        }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        $http.post('/data', localAddressBook);</span>
+    };
+&nbsp;
+    //Is this even needed?
+    var saveAddressBook = <span class="fstat-no" title="function not covered" >function(){</span>
+<span class="cstat-no" title="statement not covered" >        $http.post('/data', addressBook);</span>
+    };
+&nbsp;
+    return{
+        addNewEntry: addNewEntry,
+        getEntries: getEntries,
+        deleteEntry: deleteEntry,
+        updateEntry: updateEntry,
+        saveAddressBook: saveAddressBook,
+        localAddressBook: localAddressBook
+    };
+});
+&nbsp;
+app.factory('GoogleMapsService', <span class="fstat-no" title="function not covered" >function($http) {</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    var requestGeocode = <span class="fstat-no" title="function not covered" >function(address){</span></span>
+<span class="cstat-no" title="statement not covered" >        var requestUrl = 'https://maps.googleapis.com/maps/api/geocode/json?address=' + address;</span>
+<span class="cstat-no" title="statement not covered" >        return $http.get(requestUrl).then(<span class="fstat-no" title="function not covered" >function(response){</span></span>
+            //console.log(response.data);
+<span class="cstat-no" title="statement not covered" >            return response.data;</span>
+        });
+    };
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    return{</span>
+        requestGeocode: requestGeocode
+    };
+&nbsp;
+});
+&nbsp;
+app.factory('ExportService', <span class="fstat-no" title="function not covered" >function(AddressBookUpdater){</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    var contacts = [];</span>
+<span class="cstat-no" title="statement not covered" >    AddressBookUpdater.getEntries().then(<span class="fstat-no" title="function not covered" >function(response){<span class="cstat-no" title="statement not covered" ></span>contacts = response;}</span>);</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    var exportToFile = <span class="fstat-no" title="function not covered" >function() {</span></span>
+<span class="cstat-no" title="statement not covered" >        alasql('SELECT * INTO XLSX("Contacts.xlsx",{headers:true}) FROM ?', [contacts]);</span>
+    };
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    return{</span>
+      exportToFile: exportToFile
+    };
+});</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Tue Sep 06 2016 15:09:24 GMT-0500 (Central Daylight Time)
+</div>
+</div>
+<script src="../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../sorter.js"></script>
+</body>
+</html>
