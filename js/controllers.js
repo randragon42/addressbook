@@ -2,13 +2,12 @@
 
 app.controller('addressBookCtrl', function($scope, $rootScope, AddressBookUpdater, GoogleMapsService, ModalService) {
     $scope.addressSortOrder = "+name";
-    $scope.addressBook = [];
-    AddressBookUpdater.getEntries().then(function(response){$scope.addressBook = response;});
+    $scope.addressBook = AddressBookUpdater.getEntries();//.then(function(response){$scope.addressBook = response;});
 
     $rootScope.$on('refreshAddressBook', function(){
-        AddressBookUpdater.getEntries().then(function(response){
+        $scope.addressBook = AddressBookUpdater.getEntries();/*.then(function(response){
             $scope.addressBook = response;
-        });
+        });*/
     });
 
     //Add Google Maps integration
@@ -62,7 +61,7 @@ app.controller('addressBookCtrl', function($scope, $rootScope, AddressBookUpdate
 app.controller('EditContactModalController', function($scope, AddressBookUpdater, close, entry){
     var refresh = true;
     $scope.entryToUpdate = entry;
-    AddressBookUpdater.getEntries().then(function(response){$scope.addressBook = response;});
+    $scope.addressBook = AddressBookUpdater.getEntries();//.then(function(response){$scope.addressBook = response;});
 
     $scope.deleteEntry = function(){
         AddressBookUpdater.deleteEntry($scope.entryToUpdate);
@@ -117,18 +116,16 @@ app.controller('AddNewContactModalController', function($scope, close, AddressBo
     //ToDo: Make search for duplicates dynamic rather than on button press. Display message in popup rather than alerting
 
     $scope.submitNewEntry = function(){
-        var addressBook;
-        AddressBookUpdater.getEntries().then(function(response){
-            addressBook = response;
-            for(var i = 0; i < addressBook.length; i++){
-                if(addressBook[i].name === ($scope.entry.name)){
-                    alert($scope.entry.name + " already exists in your address book. Please use a different name.");
-                    return;
-                }
+        var addressBook = AddressBookUpdater.getEntries();//.then(function(response){
+            //addressBook = response;
+        for(var i = 0; i < addressBook.length; i++){
+            if(addressBook[i].name === ($scope.entry.name)){
+                alert($scope.entry.name + " already exists in your address book. Please use a different name.");
+                return;
             }
-            AddressBookUpdater.addNewEntry($scope.entry);
-            close(refresh, 500);
-        });
+        }
+        AddressBookUpdater.addNewEntry($scope.entry);
+        close(refresh, 500);
     };
 
 
