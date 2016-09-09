@@ -116,7 +116,6 @@ app.controller('AddNewContactModalController', function ($scope, close, AddressB
     $scope.entry = {};
 
     $scope.submitNewEntry = function () {
-        //ToDo: AddressBook gets updated and then duplicateFound returns true... fix this
         submitClicked = true;
         AddressBookUpdater.addNewEntry($scope.entry);
         close(refresh, 500);
