@@ -1,3 +1,3 @@
 # addressbook
 
-You can view the live hosted project at http://learningangular.azurewebsites.net/
+A practice project while on bench to learn Angular basics.
